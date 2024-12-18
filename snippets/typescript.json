@@ -1,0 +1,11 @@
+{
+	"useEffect": {
+		"prefix": "ue",
+		"body": [
+			"useEffect(() => {",
+			"  $1",
+			"}, [$2])"
+		],
+		"description": "useEffect"
+	},
+}

@@ -1,0 +1,18 @@
+{
+	"useEffect": {
+		"prefix": "ue",
+		"body": [
+			"useEffect(() => {",
+			"  $1",
+			"}, [$2])"
+		],
+		"description": "useEffect"
+	},
+  // "useState": {
+  //   "prefix": "us",
+  //   "body": [
+  //   "const [$1, set$1] = useState($2)"
+  //   ],
+  //   "description": "useState"
+  // }
+}
