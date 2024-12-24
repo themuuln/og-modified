@@ -1,9 +1,8 @@
 [
   {
-    "key": "ctrl+e",
-    "command": "workbench.files.action.focusFilesExplorer"
+    "key": "ctrl+a",
+    "command": "codeium.openChatView"
   },
-
   {
     "key": "shift+h",
     "command": "toggleexcludedfiles.toggle",
@@ -52,7 +51,9 @@
   {
     "key": "space e",
     "command": "workbench.action.toggleSidebarVisibility",
-    "when": "explorerViewletVisible && !inputFocus && vim.mode == 'Normal'"
+    // Testing
+  //   "when": "explorerViewletVisible && !inputFocus && vim.mode == 'Normal'"
+    "when": "!inputFocus && vim.mode == 'Normal'"
   },
   {
     "key": "ctrl+h",
@@ -97,10 +98,15 @@
     "when": "editorHoverFocused"
   },
   // {
-  //   "key": "shift+5",
-  //   "command": "extension.matchTagOrBracket",
-  //   "when": "editorTextFocus && vim.active && !inDebugRepl"
-  // }
+  //   "key": "shift+tab",
+  //   "command": "workbench.action.previousEditor",
+  //   "when": "editorTextFocus && vim.mode == 'Normal'"
+  // },
+  // {
+  //   "key": "tab",
+  //   "command": "workbench.action.nextEditor",
+  //   "when": "editorTextFocus && vim.mode == 'Normal'"
+  // },
 
   // Disabled keybindings
   {
@@ -366,6 +372,27 @@
     "when": "terminal.active"
   },
   {
+    "key": "] h",
+    "command": "workbench.action.editor.nextChange",
+    "when": "editorFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "[ h",
+    "command": "workbench.action.editor.previousChange",
+    "when": "editorFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "] shift+h",
+    "command": "editor.action.dirtydiff.previous",
+    "when": "editorFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "[ shift+h",
+    "command": "editor.action.dirtydiff.next",
+    "when": "editorFocus && vim.mode == 'Normal'"
+  },
+
+  {
     "key": "] e",
     "command": "editor.action.marker.next",
     "when": "editorFocus && vim.mode == 'Normal'"
@@ -380,24 +407,4 @@
     "command": "-editor.action.marker.next",
     "when": "editorFocus"
   },
-  // {
-  //     "key": "gsa", // "gsa" for adding surround (similar to "y s" in Vim)
-  //     "command": "vim-surround.add", 
-  //     "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
-  // },
-  // {
-  //     "key": "gsr", // "gsr" for changing surround (similar to "cs" in Vim)
-  //     "command": "vim-surround.change",
-  //     "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
-  // },
-  // {
-  //     "key": "gsd", // "gsd" for deleting surround (similar to "ds" in Vim)
-  //     "command": "vim-surround.delete",
-  //     "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
-  // },
-  // {
-  //     "key": "gss", // "gss" for surrounding in visual mode (similar to "S" in Vim)
-  //     "command": "vim-surround.visualSurround",
-  //     "when": "editorTextFocus && vim.active && vim.mode == 'Visual'"
-  // }
 ]
