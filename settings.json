@@ -684,7 +684,7 @@
   "editor.cursorSmoothCaretAnimation": "on",
   "gitlens.hovers.currentLine.over": "annotation",
   "gitlens.currentLine.enabled": false,
-  "editor.matchBrackets": "never",
+  "editor.matchBrackets": false,
   "editor.inlayHints.enabled": "on",
   "animations.Command-Palette": "Scale",
   "animations.Enabled": true,
