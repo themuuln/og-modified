@@ -1,50 +1,44 @@
 {
-  // "editor.fontFamily": "GeistMono Nerd Font",
-  // "editor.fontFamily": "JetbrainsMono Nerd Font",
-  // "editor.fontFamily": "Hack Nerd Font",
+  // fonts
+  "editor.fontFamily": "JetbrainsMono Nerd Font",
   // "editor.fontFamily": "FiraCode Nerd Font",
+  // "editor.fontFamily": "GeistMono Nerd Font",
+  // "editor.fontFamily": "Hack Nerd Font",
   "terminal.integrated.fontSize": 14,
-  "editor.fontSize": 16,
-  "editor.fontWeight": "350",
-  "terminal.integrated.fontFamily": "GeistMono Nerd Font",
+  "editor.lineHeight": 27,
+  "editor.fontSize": 21,
+  // "editor.fontWeight": "300",
+  "editor.fontWeight": "400",
   "editor.fontLigatures": true,
   "editor.fontVariations": false,
-  "workbench.startupEditor": "none",
-  "workbench.tree.enableStickyScroll": true,
-  "workbench.list.fastScrollSensitivity": 3,
-  "github.copilot.chat.localeOverride": "en",
 
-  // Editor
   "editor.quickSuggestionsDelay": 0,
+  "search.showLineNumbers": true,
+  "window.density.editorTabHeight": "compact",
   "editor.language.brackets": [],
-  "editor.matchBrackets": false,
   "editor.detectIndentation": false,
   "editor.tabSize": 2,
   "editor.suggest.preview": true,
   "editor.suggest.localityBonus": true,
-  "editor.cursorSurroundingLines": 5,
-  "search.showLineNumbers": true,
+  "editor.cursorSurroundingLines": 8,
   "editor.lineNumbers": "relative",
-  "editor.cursorSmoothCaretAnimation": "on",
-  "workbench.colorTheme": "One Dark Pro Darker",
-  "workbench.activityBar.location": "hidden",
-  "window.density.editorTabHeight": "compact",
-  "editor.lineHeight": 26,
-  "breadcrumbs.enabled": false,
-  "editor.smoothScrolling": true,
-  "terminal.integrated.smoothScrolling": true,
-  "workbench.list.smoothScrolling": true,
   "github.copilot.chat.followUps": "always",
+  "github.copilot.chat.localeOverride": "en",
 
-  // Git
+  // Git / Git Diff
   "git.enableSmartCommit": true,
-  "git.autofetch": true, 
-  "git.confirmSync": false, 
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.blame.editorDecoration.enabled": true,
+  "git.blame.statusBarItem.enabled": true,
+  "git.blame.statusBarItem.template": "${authorDateAgo}",
   "gitlens.plusFeatures.enabled": false,
-  "diffEditor.experimental.showMoves": true, 
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.experimental.showMoves": true,
   "diffEditor.hideUnchangedRegions.enabled": true,
   "diffEditor.hideUnchangedRegions.minimumLineCount": 3,
   "diffEditor.hideUnchangedRegions.contextLineCount": 3,
+  "diffEditor.renderSideBySide": true,
   "scm.alwaysShowRepositories": true, // true if you work on multiple project at the same time
   "scm.defaultViewMode": "tree", // more organized
   "scm.repositories.sortOrder": "name", // more organized
@@ -56,192 +50,157 @@
 
   // Extensions
   "extensions.ignoreRecommendations": true,
-  "extensions.experimental.affinity": { "VSpaceCode.whichkey": 1, "vscodevim.vim": 1 },
+  "extensions.experimental.affinity": {
+    "VSpaceCode.whichkey": 1,
+    "vscodevim.vim": 1,
+    "asvetliakov.vscode-neovim": 1
+  },
 
   // Other
   "npm.packageManager": "yarn",
   "npm.exclude": "",
   "terminal.integrated.gpuAcceleration": "on", // smooth
-  "testing.openTesting": "neverOpen",
 
   // Formatter
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true, // Community Standard
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "search.exclude": {
     "package-lock.json": true,
-    "build": false,
+    "build": false
   },
   "prettier.jsxSingleQuote": true,
   "prettier.singleQuote": true,
   "prettier.printWidth": 120,
   "prettier.trailingComma": "all",
   "prettier.ignorePath": ".gitignore",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
 
   // Editor
   "editor.showFoldingControls": "always", // ease navigation vim
   "editor.minimap.showSlider": "always", // to locate cursor rapidly
-  "editor.stickyScroll.enabled": false,
-  "editor.cursorStyle": "block", // compact ui
   "editor.unicodeHighlight.ambiguousCharacters": false, // prevents cyrillic ruin my editor
   "editor.multiCursorModifier": "ctrlCmd", // most compatible with vim
   "editor.minimap.renderCharacters": false, // no need to see characters
-  "editor.codeActionsOnSave": [
-    // can be used only if you use ts js etc...
-    // "source.addMissingImports",
-    // "source.fixAll.eslint"
-  ],
-
+  "editor.codeActionsOnSave": ["source.addMissingImports", "source.fixAll.eslint"],
   "codeium.enableSearch": true, // compact ui, readability
-
-  // Efficient Coding
   "html.completion.attributeDefaultValue": "singlequotes", // community standard
-  "todo-tree.general.tags": [
-    "ASK:",
-    "API:",
-    "BUG",
-    "FIXME",
-    "TODO",
-    "UI:",
-    "LANG:"
-  ],
 
   // VSCode-Vim
   "vim.foldfix": true, // for navigation between lines
   "vim.gdefault": true, // optional
-  "vim.highlightedyank.enable": true, // better development experience (feedback)
-  "vim.cursorStylePerMode.insert": "line", // standard
+  "vim.highlightedyank.enable": true, // standard
   "vim.cursorStylePerMode.normal": "block", // better visiblity
-  "vim.cursorStylePerMode.visual": "line-thin", // better visiblity
-  "vim.cursorStylePerMode.visualline": "line-thin", // better visiblity
-  "vim.cursorStylePerMode.visualblock": "line-thin", // better visiblity
   "vim.overrideCopy": true, // SAME CLIPBOARD
   "vim.useSystemClipboard": true, // SAME CLIPBOARD
   "vim.hlsearch": true, // Better for new vimmers
-  "vim.sneakReplacesF": true, // for speed
-  // "vim.sneak": false, // already replaced with vim-easymotion
-  "vim.easymotion": true, // Game changer just press s
-  "vim.highlightedyank.textColor": "#000", 
-  "vim.highlightedyank.color": "#fff", 
-  "vim.easymotionMarkerForegroundColorOneChar": "#fff", 
-  "vim.easymotionIncSearchForegroundColor": "#fff", 
-  "vim.easymotionMarkerForegroundColorTwoCharFirst": "#fff", 
-  "vim.easymotionMarkerForegroundColorTwoCharSecond": "#fff", 
-  "vim.searchMatchColor": "#fff",
-  "vim.searchHighlightTextColor": "#fff",
-  "vim.searchHighlightColor": "#000",
-  "vim.searchMatchTextColor": "#000",
-  "vim.substitutionColor": "#FF0000",
-  "vim.substitutionTextColor": "#000000",
-  "vim.sneak": true,
-  "vim.sneakUseIgnorecaseAndSmartcase": true,
   "vim.camelCaseMotion.enable": true,
-  "vim.showmodename": false,
-  "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?", // remove comments if you dont use shift+e or shift-w
+  "vim.history": 200,
+  "vim.smartRelativeLine": true,
+  "vim.textwidth": 120,
+  "vim.highlightedyank.textColor": "#000",
+  "vim.highlightedyank.color": "#fff",
+  // Replaced vim eaysmotion with find-then-jump
+  // "vim.easymotionIncSearchForegroundColor": "#fff",
+  // "vim.easymotionMarkerForegroundColorTwoCharFirst": "#fff",
+  // "vim.easymotionMarkerForegroundColorTwoCharSecond": "#fff",
+  // "vim.easymotionMarkerForegroundColorOneChar": "#fff",
+
+  // "vim.searchMatchColor": "#fff",
+  // "vim.searchHighlightTextColor": "#fff",
+  // "vim.searchHighlightColor": "#000",
+  // "vim.searchMatchTextColor": "#000",
+  // "vim.substitutionColor": "#FF0000",
+  // "vim.substitutionTextColor": "#000000",
 
   // Exclude files
   "files.exclude": {
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
-    "**/test": true,
-    "**/.metadata": true,
-    "**/pubspec.lock": true,
-    "**/README.md": true,
-    "**/.DS_Store": true,
-    "**/Thumbs.db": true,
-    "**/node_modules": true,
-    "**/build": true,
-    "**/drizzle": true,
-    "**/dist": true,
-    "**/.todo.md": true,
-    "**/.flutter-plugins": true,
-    "**/.flutter-plugins-dependencies": true,
-    "**/.dart_tool": true,
-    "**/.lintstagedrc.mjs": true,
-    "**/.markdownlint.json": true,
-    "**/.markdownlintignore": true,
-    "**/cspell.json": true,
-    "**/next-env.d.ts": true,
-    "**/migrate.ts": true,
-    "**/.idea": true,
-    "**/LICENSE": true,
-    "**/__tests__": true,
-    "**/_ruby-version": true,
-    "**/_node-version": true,
-    "**/_bundle": true,
-    "**/Gemfile": true,
-    "**/ios": true
+    "**/globalStorage": false,
+    "**/workspaceStorage": false,
+    "**/snippets": false,
+    "**/History": false,
+    "**/flutter_01.log": false,
+    "**/.svn": false,
+    "**/.hg": false,
+    "**/CVS": false,
+    "**/test": false,
+    "**/.metadata": false,
+    "**/pubspec.lock": false,
+    "**/README.md": false,
+    "**/.DS_Store": false,
+    "**/Thumbs.db": false,
+    "**/node_modules": false,
+    "**/build": false,
+    "**/drizzle": false,
+    "**/dist": false,
+    "**/.todo.md": false,
+    "**/.flutter-plugins": false,
+    "**/.flutter-plugins-dependencies": false,
+    "**/.dart_tool": false,
+    "**/.lintstagedrc.mjs": false,
+    "**/.markdownlint.json": false,
+    "**/.markdownlintignore": false,
+    "**/cspell.json": false,
+    "**/next-env.d.ts": false,
+    "**/migrate.ts": false,
+    "**/.idea": false,
+    "**/LICENSE": false,
+    "**/__tests__": false,
+    "**/_ruby-version": false,
+    "**/_node-version": false,
+    "**/_bundle": false,
+    "**/Gemfile": false
   },
 
-  "window.commandCenter": false,
+  "window.commandCenter": true, // Зайгаа хэмнэмээр байвал `false` болгож болно
   "debug.internalConsoleOptions": "openOnSessionStart",
-
-  "editor.wordWrap": "wordWrapColumn",
+  // "editor.wordWrap": "wordWrapColumn",
   "editor.wordWrapColumn": 120,
-  "workbench.editor.enablePreview": false,
-  // "window.zoomLevel": -1, // optional
-  "editor.formatOnSaveMode": "modifications",
   "editor.fastScrollSensitivity": 3,
-  "todo-tree.general.tagGroups": {},
+
+  // TODO TREE
   "todo-tree.tree.showCountsInTree": true,
   "todo-tree.general.statusBar": "tags",
-  "codeium.indexStoragePath": "/Users/ict/developmnet/codeium",
-  "diffEditor.ignoreTrimWhitespace": false,
+  "todo-tree.general.tags": ["ASK:", "API:", "BUG", "FIXME", "TODO", "UI:", "LANG:"],
+
   "zenMode.showTabs": "none",
-  "workbench.layoutControl.enabled": false,
-  "codeium.enableCommandSideHintEducation": false,
   "zenMode.centerLayout": false,
-  "codeium.enableCodeLens": false,
   "git.openRepositoryInParentFolders": "always",
-  "workbench.panel.showLabels": false,
   "editor.accessibilitySupport": "off",
-  "find-it-faster.general.batTheme": "TwoDark",
+
+  // Find it faster fzf alternative for vscode
+  "find-it-faster.general.batTheme": "base16",
   "find-it-faster.advanced.disableStartupChecks": true,
   "find-it-faster.general.openFileInPreviewEditor": true,
-  "terminal.integrated.env.osx": {},
-  "gitlens.remotes": [
-    {
-      "domain": "git.ictgroup.mn",
-      "type": "GitLab"
-    }
-  ],
-  "terminal.integrated.confirmOnExit": "hasChildProcesses",
-  "terminal.integrated.cursorBlinking": true,
-  "terminal.integrated.hideOnStartup": "whenEmpty",
+
+  "gitlens.remotes": [{ "domain": "git.ictgroup.mn", "type": "GitLab" }],
+
+  // whichkey
+  "whichkey.sortOrder": "custom",
+  "whichkey.showButtons": false,
   "whichkey.useFullWidthCharacters": true,
-  // Whichkey
-  "whichkey.sortOrder": "alphabetically",
   "whichkey.bindingOverrides": [
+    { "keys": " ", "name": "Find Files (Root Dir)", "type": "command", "command": "find-it-faster.findFiles" },
+    { "keys": ":", "name": "Command History", "type": "command", "command": "workbench.action.showCommands" },
+    { "keys": ",", "name": "Switch Buffer", "type": "command", "command": "workbench.action.showEditorsInActiveGroup" },
     {
-      "keys": " ",
-      "name": "Find Files (Root Dir)",
-      "type": "command",
-      "command": "find-it-faster.findFiles"
-    },
-    {
-      "keys": ",",
-      "name": "Switch Buffer",
-      "type": "command",
-      "command": "workbench.action.showEditorsInActiveGroup"
+      "keys": "a",
+      "name": "+AI",
+      "type": "bindings",
+      "bindings": [
+        { "key": "a", "name": "Toggle (Chat)", "type": "command", "command": "windsurf.prioritized.chat.open" }
+      ]
     },
     {
       "keys": "b.o",
       "name": "Close Other Buffers",
       "type": "command",
-      "command":"workbench.action.closeOtherEditors",
+      "command": "workbench.action.closeOtherEditors"
     },
-    {
-      "keys": "b.p",
-      "name": "Toggle Pin",
-      "type": "command",
-      "command":"extension.togglePinEditor",
-    },
+    { "keys": "b.p", "name": "Toggle Pin", "type": "command", "command": "togglePinEditor.togglePinEditor" },
     {
       "keys": "b.P",
       "name": "Delete Non-Pinned Buffers",
       "type": "command",
-      "command":"workbench.action.closeOtherEditors",
+      "command": "workbench.action.closeOtherEditors"
     },
     {
       "keys": "e",
@@ -249,133 +208,52 @@
       "type": "command",
       "command": "workbench.action.toggleSidebarVisibility"
     },
-    {
-      "keys": "E",
-      "name": "Toggle Explorer",
-      "type": "command",
-      "command": "workbench.action.toggleAuxiliaryBar"
-    },
+    { "keys": "E", "name": "Toggle Explorer", "type": "command", "command": "workbench.action.toggleAuxiliaryBar" },
     {
       "keys": "c",
       "name": "+Code",
       "type": "bindings",
       "bindings": [
-        {
-          "key": "a",
-          "name": "Code Action/Quick Fix",
-          "type": "command",
-          "command": "editor.action.quickFix"
-        },
-        {
-          "key": "A",
-          "name": "Source Action",
-          "type": "command",
-          "command": "editor.action.sourceAction"
-        },
-        {
-          "key": "s",
-          "name": "Outline Focus",
-          "type": "command",
-          "command": "outline.focus"
-        },
-        {
-          "key": "u",
-          "name": "Organize Imports",
-          "type": "command",
-          "command": "editor.action.organizeImports"
-        },
-        {
-          "key": "r",
-          "name": "Rename",
-          "type": "command",
-          "command": "editor.action.rename"
-        },
-        {
-          "key": "R",
-          "name": "Rename File",
-          "type": "command",
-          "command": "file-browser.rename"
-        },
+        { "key": "a", "name": "Code Action/Quick Fix", "type": "command", "command": "editor.action.quickFix" },
+        { "key": "A", "name": "Source Action", "type": "command", "command": "editor.action.sourceAction" },
+        { "key": "s", "name": "Outline Focus", "type": "command", "command": "workbench.action.gotoSymbol" },
+        { "key": "u", "name": "Organize Imports", "type": "command", "command": "editor.action.organizeImports" },
+        { "key": "r", "name": "Rename", "type": "command", "command": "editor.action.rename" },
+        { "key": "R", "name": "Rename File", "type": "command", "command": "file-browser.rename" }
       ]
     },
-    {
-      "keys": "d.r",
-      "name": "Hot Restart Flutter",
-      "type": "command",
-      "command":"flutter.hotRestart",
-    },
+    { "keys": "d.r", "name": "Hot Restart Flutter", "type": "command", "command": "flutter.hotRestart" },
+    { "keys": "d.u", "name": "Toggle UI", "type": "command", "command": "workbench.action.toggleSidebarVisibility" },
     {
       "keys": "T.s",
       "name": "Toggle Statusbar Visibility",
       "type": "command",
-      "command":"workbench.action.toggleStatusbarVisibility",
+      "command": "workbench.action.toggleStatusbarVisibility"
     },
-    {
-      "keys": "T.c",
-      "name": "Toggle Breadcrumbs",
-      "type": "command",
-      "command":"breadcrumbs.toggle",
-    },
-    {
-      "keys": "f.b",
-      "name": "Buffers",
-      "type": "command",
-      "command":"workbench.action.showEditorsInActiveGroup",
-    },
+    { "keys": "T.c", "name": "Toggle Breadcrumbs", "type": "command", "command": "breadcrumbs.toggle" },
+    { "keys": "f.b", "name": "Buffers", "type": "command", "command": "workbench.action.showEditorsInActiveGroup" },
+    { "keys": "`", "name": "Buffers", "type": "command", "command": "workbench.action.showEditorsInActiveGroup" },
     {
       "keys": "f.e",
       "name": "Explorer NeoTree (Root Dir)",
       "type": "command",
-      "command":"workbench.action.toggleSidebarVisibility",
+      "command": "workbench.action.toggleSidebarVisibility"
     },
     {
       "keys": "f.E",
       "name": "Explorer NeoTree (cwd)",
       "type": "command",
-      "command":"workbench.action.toggleSidebarVisibility",
+      "command": "workbench.action.toggleSidebarVisibility"
     },
-    {
-      "keys": "f.f",
-      "name": "Find Files (Root Dir)",
-      "type": "command",
-      "command":"find-it-faster.findFiles",
-    },
-    {
-      "keys": "f.F",
-      "name": "Find Files (cwd)",
-      "type": "command",
-      "command":"find-it-faster.findFiles",
-    },
-    {
-      "keys": "f.n",
-      "name": "New File",
-      "type": "command",
-      "command":"workbench.action.files.newUntitledFile",
-    },
-    {
-      "keys": "f.p",
-      "name": "Projects",
-      "type": "command",
-      "command":"workbench.action.openRecent",
-    },
-    {
-      "keys": "f.r",
-      "name": "Recent",
-      "type": "command",
-      "command":"workbench.action.openRecent",
-    },
-    {
-      "keys": "f.R",
-      "name": "Recent",
-      "type": "command",
-      "command":"workbench.action.openRecent",
-    },
-    {
-      "keys": "f.t",
-      "name": "Terminal",
-      "type": "command",
-      "command":"workbench.action.terminal.focus",
-    },
+    { "keys": "f.f", "name": "Find Files (Root Dir)", "type": "command", "command": "find-it-faster.findFiles" },
+    { "keys": "f.c", "name": "Find Config File", "type": "command", "command": "workbench.action.openSettingsJson" },
+    { "keys": "f.F", "name": "Find Files (cwd)", "type": "command", "command": "find-it-faster.findFiles" },
+    { "keys": "f.n", "name": "New File", "type": "command", "command": "workbench.action.files.newUntitledFile" },
+    { "keys": "f.p", "name": "Projects", "type": "command", "command": "workbench.action.openRecent" },
+    { "keys": "f.r", "name": "Recent", "type": "command", "command": "workbench.action.openRecent" },
+    { "keys": "f.R", "name": "Recent", "type": "command", "command": "workbench.action.openRecent" },
+    { "keys": "f.t", "name": "Terminal (Root Dir)", "type": "command", "command": "workbench.action.terminal.focus" },
+    { "keys": "f.T", "name": "Terminal (cwd)", "type": "command", "command": "workbench.action.terminal.focus" },
     {
       "keys": "g",
       "name": "+Git",
@@ -383,163 +261,49 @@
       "bindings": [
         {
           "key": "b",
-          "name": "Git Blame Line",
-          "type": "command",
-          "command": "gitlens.toggleLineBlame"
+          "name": "Git Branch...",
+          "type": "bindings",
+          "bindings": [
+            { "key": "c", "name": "Git Checkout", "type": "command", "command": "git.checkout" },
+            { "key": "d", "name": "Delete Branch", "type": "command", "command": "git.deleteBranch" },
+            { "key": "n", "name": "Git Create New Branch", "type": "command", "command": "git.branch" }
+          ]
         },
-        {
-          "key": "B",
-          "name": "Git Browse (open)",
-          "type": "command",
-          "command": "gitlens.openRepoOnRemote"
-        },
-        {
-          "key": "c",
-          "name": "Search Commits",
-          "type": "command",
-          "command": "gitlens.showCommitSearch",
-        },
-        {
-          "key": "e",
-          "name": "Git Explorer",
-          "type": "command",
-          "command": "workbench.view.scm"
-        },
-        {
-          "key": "f",
-          "name": "Current File History",
-          "type": "command",
-          "command": "gitlens.views.fileHistory.focus"
-        },
-        {
-          "key": "g",
-          "name": "Git Explorer",
-          "type": "command",
-          "command": "workbench.view.scm"
-        },
-        {
-          "key": "a",
-          "name": "Stage",
-          "type": "command",
-          "command": "git.stage"
-        },
+        { "key": "B", "name": "Git Browse (open)", "type": "command", "command": "gitlens.openRepoOnRemote" },
+        { "key": "c", "name": "Search Commits", "type": "command", "command": "gitlens.showCommitSearch" },
+        { "key": "e", "name": "Git Explorer", "type": "command", "command": "workbench.view.scm" },
+        { "key": "f", "name": "Current File History", "type": "command", "command": "gitlens.showQuickFileHistory" },
+        { "key": "a", "name": "Stage", "type": "command", "command": "git.stage" },
         {
           "key": "c",
           "name": "Create...",
           "type": "bindings",
-          "bindings": [
-            {
-              "key": "p",
-              "name": "Pull Request",
-              "type": "command",
-              "command": "pr.create"
-            }
-          ]
+          "bindings": [{ "key": "p", "name": "Pull Request", "type": "command", "command": "pr.create" }]
         },
         {
           "key": "h",
           "name": "Hunk...",
           "type": "bindings",
           "bindings": [
-            {
-              "key": "b",
-              "name": "Blame Line",
-              "type": "command",
-              "command": "pr.create"
-            },
-            {
-              "key": "B",
-              "name": "Blame Buffer",
-              "type": "command",
-              "command": "gitlens.toggleFileBlame"
-// gitlens.diffLineWithPrevious
-            },
-            {
-              "key": "d",
-              "name": "Diff This",
-              "type": "command",
-              "command": "git.openChange"
-            },
-            {
-              "key": "p",
-              "name": "Preview Hunk Inline",
-              "type": "command",
-              "command": "pr.create"
-            },
-            {
-              "key": "b",
-              "name": "Blame Line",
-              "type": "command",
-              "command": "pr.create"
-            },
-            {
-              "key": "b",
-              "name": "Blame Line",
-              "type": "command",
-              "command": "pr.create"
-            },
-            {
-              "key": "b",
-              "name": "Blame Line",
-              "type": "command",
-              "command": "pr.create"
-            },
-            {
-              "key": "b",
-              "name": "Blame Line",
-              "type": "command",
-              "command": "pr.create"
-            },
-            {
-              "key": "b",
-              "name": "Blame Line",
-              "type": "command",
-              "command": "pr.create"
-            },
+            { "key": "b", "name": "Blame Line", "type": "command", "command": "pr.create" },
+            { "key": "B", "name": "Blame Buffer", "type": "command", "command": "gitlens.toggleFileBlame" },
+            { "key": "d", "name": "Diff This", "type": "command", "command": "git.openChange" },
+            { "key": "p", "name": "Preview Hunk Inline", "type": "command", "command": "pr.create" },
+            { "key": "b", "name": "Blame Line", "type": "command", "command": "pr.create" },
+            { "key": "b", "name": "Blame Line", "type": "command", "command": "pr.create" },
+            { "key": "b", "name": "Blame Line", "type": "command", "command": "pr.create" },
+            { "key": "b", "name": "Blame Line", "type": "command", "command": "pr.create" },
+            { "key": "b", "name": "Blame Line", "type": "command", "command": "pr.create" }
           ]
         },
-        {
-          "key": "d",
-          "name": "Delete Branch",
-          "type": "command",
-          "command": ""
-        },
-        {
-          "key": "e",
-          "name": "Open Working File",
-          "type": "command",
-          "command": "gitlens.openWorkingFile"
-        },
-        {
-          "key": "f",
-          "name": "Fetch",
-          "type": "command",
-          "command": "git.fetch"
-        },
-        {
-          "key": "F",
-          "name": "Pull From",
-          "type": "command",
-          "command": "git.pullFrom"
-        },
-        {
-          "key": "g",
-          "name": "Graph",
-          "type": "command",
-          "command": "git-graph.view"
-        },
-        {
-          "key": "h",
-          "name": "History",
-          "type": "command",
-          "command": "git.viewFileHistory"
-        },
-        {
-          "key": "j",
-          "name": "Next Change",
-          "type": "command",
-          "command": "workbench.action.editor.nextChange"
-        },
+        { "key": "d", "name": "Delete Branch", "type": "command", "command": "" },
+        { "key": "e", "name": "Open Working File", "type": "command", "command": "git.openFile" },
+        { "key": "f", "name": "Fetch", "type": "command", "command": "git.fetch" },
+        { "key": "F", "name": "Pull From", "type": "command", "command": "git.pullFrom" },
+        { "key": "g", "name": "Git Command Palette", "type": "command", "command": "gitlens.gitCommands" },
+        { "key": "g", "name": "Graph", "type": "command", "command": "gitlens.showGraphPage" },
+        { "key": "h", "name": "History", "type": "command", "command": "gitlens.showQuickFileHistory" },
+        { "key": "j", "name": "Next Change", "type": "command", "command": "workbench.action.editor.nextChange" },
         {
           "key": "k",
           "name": "Previous Change",
@@ -553,29 +317,15 @@
           "command": "gitlens.toggleLineBlame",
           "when": "editorTextFocus && gitlens:canToggleCodeLens && gitlens:enabled && config.gitlens.keymap == 'alternate'"
         },
+        { "key": "p", "name": "Git Diff", "type": "command", "command": "editor.action.dirtydiff.next" },
+        { "key": "r", "name": "Git Revert Hunk", "type": "command", "command": "git.revertSelectedRanges" },
+        { "key": "P", "name": "Push", "type": "command", "command": "git.push" },
+        { "key": "s", "name": "Stash", "type": "command", "command": "workbench.view.scm" },
         {
-          "key": "p",
-          "name": "Git Diff",
-          "type": "command",
-          "command": "editor.action.dirtydiff.next"
-        },
-        {
-          "key": "r",
-          "name": "Git Revert Hunk",
-          "type": "command",
-          "command": "git.revertSelectedRanges"
-        },
-        {
-          "key": "P",
-          "name": "Push",
-          "type": "command",
-          "command": "git.push"
-        },
-        {
-          "key": "s",
-          "name": "Stash",
-          "type": "command",
-          "command": "workbench.view.scm"
+          "key": "t",
+          "name": "Toggle...",
+          "type": "bindings",
+          "bindings": [{ "key": "b", "name": "Blame Line", "type": "command", "command": "gitlens.toggleLineBlame" }]
         },
         {
           "key": "S",
@@ -598,215 +348,23 @@
         }
       ]
     },
-    { "keys": "1", "position": -1 },
-    { "keys": "2", "position": -1 }, 
-    { "keys": "3", "position": -1 },
-    { "keys": "4", "position": -1 },
-    { "keys": "5", "position": -1 },
-    { "keys": "6", "position": -1 },
-    { "keys": "7", "position": -1 },
-    { "keys": "8", "position": -1 },
-    // {
-    //   "keys": "h",
-    //   "name": "Harpoon Quick Menu",
-    //   "type": "command",
-    //   "command": "vscode-harpoon.editEditors"
-    // },
-    // {
-    //   "keys": "H",
-    //   "name": "Harpoon File",
-    //   "type": "command",
-    //   "command": "vscode-harpoon.addEditor"
-    // },
-    {
-      "keys": "-",
-      "name": "Split Window Below",
-      "type": "command",
-      "command": "workbench.action.splitEditorDown"
-    },
-    {
-      "keys": "z",
-      "name": "Zen Mode",
-      "type": "command",
-      "command": "workbench.action.toggleZenMode"
-    },
-    {
-      "keys": "n",
-      "name": "Notifications",
-      "type": "command",
-      "command": "notifications.showList"
-    },
-    {
-      "keys": "/",
-      "name": "Grep (Root Dir)",
-      "type": "command",
-      "command": "find-it-faster.findWithinFiles"
-    },
-    {
-      "keys": "l",
-      "name": "+LSP",
-      "type": "bindings",
-      "bindings": [
-        {
-          "key": ";",
-          "name": "Refactor",
-          "type": "command",
-          "command": "editor.action.refactor",
-          "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
-        },
-        {
-          "key": "a",
-          "name": "Auto Fix",
-          "type": "command",
-          "command": "editor.action.autoFix",
-          "when": "editorTextFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)quickfix\\b/"
-        },
-        {
-          "key": "d",
-          "name": "Definition",
-          "type": "command",
-          "command": "editor.action.revealDefinition",
-          "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
-        },
-        {
-          "key": "D",
-          "name": "Declaration",
-          "type": "command",
-          "command": "editor.action.revealDeclaration"
-        },
-        {
-          "key": "e",
-          "name": "Errors",
-          "type": "command",
-          "command": "workbench.actions.view.problems"
-        },
-        {
-          "key": "i",
-          "name": "Implementation",
-          "type": "command",
-          "command": "editor.action.goToImplementation",
-          "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
-        },
-        {
-          "key": "n",
-          "name": "Next Problem",
-          "type": "command",
-          "command": "editor.action.marker.next",
-          "when": "editorFocus"
-        },
-        {
-          "key": "N",
-          "name": "Next Problem (Proj)",
-          "type": "command",
-          "command": "editor.action.marker.nextInFiles",
-          "when": "editorFocus"
-        },
-        {
-          "key": "o",
-          "name": "Outline",
-          "type": "command",
-          "command": "outline.focus"
-        },
-        {
-          "key": "p",
-          "name": "Prev Problem",
-          "type": "command",
-          "command": "editor.action.marker.prevInFiles",
-          "when": "editorFocus"
-        },
-        {
-          "key": "P",
-          "name": "Prev Problem (Proj)",
-          "type": "command",
-          "command": "editor.action.marker.prev",
-          "when": "editorFocus"
-        },
-        {
-          "key": "q",
-          "name": "Quick Fix",
-          "type": "command",
-          "command": "editor.action.quickFix",
-          "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
-        },
-        {
-          "key": "r",
-          "name": "Rename",
-          "type": "command",
-          "command": "editor.action.rename",
-          "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
-        },
-        {
-          "key": "v",
-          "name": "View All References",
-          "type": "command",
-          "command": "references-view.find",
-          "when": "editorHasReferenceProvider"
-        },
-        {
-          "key": "s",
-          "name": "Go To Symbol",
-          "type": "command",
-          "command": "workbench.action.gotoSymbol"
-        },
-        {
-          "key": "S",
-          "name": "Show All Symbols",
-          "type": "command",
-          "command": "workbench.action.showAllSymbols"
-        }
-      ]
-    },
+    { "keys": "-", "name": "Split Window Below", "type": "command", "command": "workbench.action.splitEditorDown" },
+    { "keys": "z", "name": "Zen Mode", "type": "command", "command": "workbench.action.toggleZenMode" },
+    { "keys": "n", "name": "Notifications", "type": "command", "command": "notifications.showList" },
+    { "keys": "/", "name": "Grep (Root Dir)", "type": "command", "command": "find-it-faster.findWithinFiles" },
+    { "keys": "l", "name": "Settings (JSON)", "type": "command", "command": "workbench.action.openSettingsJson" },
     {
       "keys": "m",
       "name": "+Mark",
       "type": "bindings",
       "bindings": [
-        {
-          "key": "c",
-          "name": "Clear Bookmarks",
-          "type": "command",
-          "command": "bookmarks.clear"
-        },
-        {
-          "key": "j",
-          "name": "Next Bookmark",
-          "type": "command",
-          "command": "bookmarks.jumpToNext",
-          "when": "editorTextFocus"
-        },
-        {
-          "key": "k",
-          "name": "Previous Bookmark",
-          "type": "command",
-          "command": "bookmarks.jumpToPrevious",
-          "when": "editorTextFocus"
-        },
-        {
-          "key": "l",
-          "name": "List Bookmarks",
-          "type": "command",
-          "command": "bookmarks.listFromAllFiles",
-          "when": "editorTextFocus"
-        },
-        {
-          "key": "r",
-          "name": "Refresh Bookmarks",
-          "type": "command",
-          "command": "bookmarks.refresh"
-        },
-        {
-          "key": "t",
-          "name": "Toggle Bookmark",
-          "type": "command",
-          "command": "bookmarks.toggle",
-          "when": "editorTextFocus"
-        },
-        {
-          "key": "s",
-          "name": "Show Bookmarks",
-          "type": "command",
-          "command": "workbench.view.extension.bookmarks"
-        }
+        { "key": "c", "name": "Clear Bookmarks", "type": "command", "command": "bookmarks.clear" },
+        { "key": "j", "name": "Next Bookmark", "type": "command", "command": "bookmarks.jumpToNext" },
+        { "key": "k", "name": "Previous Bookmark", "type": "command", "command": "bookmarks.jumpToPrevious" },
+        { "key": "l", "name": "List Bookmarks", "type": "command", "command": "bookmarks.listFromAllFiles" },
+        { "key": "r", "name": "Refresh Bookmarks", "type": "command", "command": "bookmarks.refresh" },
+        { "key": "t", "name": "Toggle Bookmark", "type": "command", "command": "bookmarks.toggle" },
+        { "key": "s", "name": "Show Bookmarks", "type": "command", "command": "workbench.view.extension.bookmarks" }
       ]
     },
     {
@@ -815,28 +373,59 @@
       "type": "bindings",
       "bindings": [
         {
-          "key": "m",
-          "name": "Toggle Minimap",
-          "type": "command",
-          "command": "editor.action.toggleMinimap"
+          "key": "a",
+          "name": "Toggle Animations",
+          "command": "toggle",
+          "when": "editorTextFocus",
+          "args": {
+            "id": "toggleAnimations",
+            "value": [
+              {
+                // "editor.cursorSmoothCaretAnimation": "off", // Vscode Animation байгаа болохоор аль ч үед `off` байхаар болголоо
+                "editor.smoothScrolling": true,
+                "editor.cursorBlinking": "smooth",
+                "workbench.list.smoothScrolling": true,
+                "terminal.integrated.smoothScrolling": true,
+                "animations.Active": "Scale",
+                "animations.Command-Palette": "Scale",
+                "animations.CursorAnimation": true
+              },
+              {
+                // "editor.cursorSmoothCaretAnimation": "off",
+                "editor.smoothScrolling": false,
+                "editor.cursorBlinking": "blink",
+                "workbench.list.smoothScrolling": false,
+                "terminal.integrated.smoothScrolling": false,
+                "animations.Active": "None",
+                "animations.Command-Palette": "None",
+                "animations.CursorAnimation": false
+              }
+            ]
+          }
         },
         {
-          "key": "C",
-          "name": "Change Theme",
-          "type": "command",
-          "command": "workbench.action.selectTheme"
+          "key": "t",
+          "name": "Toggle Tabs",
+          "command": "toggle",
+          "when": "editorTextFocus",
+          "args": {
+            "id": "workbench.editor.showTabs",
+            "value": [{ "workbench.editor.showTabs": "multiple" }, { "workbench.editor.showTabs": "none" }]
+          }
         },
+        { "key": "m", "name": "Toggle Minimap", "type": "command", "command": "editor.action.toggleMinimap" },
+        { "key": "C", "name": "Change Theme", "type": "command", "command": "workbench.action.selectTheme" },
+        { "key": "w", "name": "Toggle Word Wrap", "type": "command", "command": "editor.action.toggleWordWrap" },
+        { "key": "l", "name": "Toggle Relative Number", "type": "command", "command": "editor.action.toggleWordWrap" },
         {
-          "key": "w",
-          "name": "Toggle Word Wrap",
-          "type": "command",
-          "command": "editor.action.toggleWordWrap"
-        },
-        {
-          "key": "x",
-          "name": "Toggle Excluded Files",
-          "type": "command",
-          "command": "toggleexcludedfiles.toggle"
+          "key": "h",
+          "name": "Toggle Inlay Hints",
+          "command": "toggle",
+          "when": "editorTextFocus",
+          "args": {
+            "id": "toggleInlayHints",
+            "value": [{ "editor.inlayHints.enabled": "on" }, { "editor.inlayHints.enabled": "off" }]
+          }
         }
       ]
     },
@@ -845,24 +434,9 @@
       "name": "+Open",
       "type": "bindings",
       "bindings": [
-        {
-          "key": "d",
-          "name": "Directory",
-          "type": "command",
-          "command": "workbench.action.files.openFolder"
-        },
-        {
-          "key": "r",
-          "name": "Recent",
-          "type": "command",
-          "command": "workbench.action.openRecent"
-        },
-        {
-          "key": "f",
-          "name": "File",
-          "type": "command",
-          "command": "workbench.action.files.openFile"
-        }
+        { "key": "d", "name": "Directory", "type": "command", "command": "workbench.action.files.openFolder" },
+        { "key": "r", "name": "Recent", "type": "command", "command": "workbench.action.openRecent" },
+        { "key": "f", "name": "File", "type": "command", "command": "workbench.action.files.openFile" }
       ]
     },
     {
@@ -884,18 +458,8 @@
           "command": "togglePeekWidgetFocus",
           "when": "inReferenceSearchEditor || referenceSearchVisible"
         },
-        {
-          "key": "r",
-          "name": "References",
-          "type": "command",
-          "command": "editor.action.referenceSearch.trigger"
-        },
-        {
-          "key": "t",
-          "name": "Type Definition",
-          "type": "command",
-          "command": "editor.action.peekTypeDefinition"
-        }
+        { "key": "r", "name": "References", "type": "command", "command": "editor.action.referenceSearch.trigger" },
+        { "key": "t", "name": "Type Definition", "type": "command", "command": "editor.action.peekTypeDefinition" }
       ]
     },
     {
@@ -905,138 +469,145 @@
       "command": "workbench.action.splitEditor"
     },
     {
+      "keys": "q",
+      "name": "+quit/session",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "q",
+          "name": "Quit",
+          "type": "command",
+          "command": "workbench.action.quit"
+        },
+        { "key": "q", "name": "Quit All", "type": "command", "command": "workbench.action.quit" },
+        { "key": "s", "name": "Select Session", "type": "command", "command": "workbench.action.openRecent" },
+        { "key": "S", "name": "Select Session", "type": "command", "command": "workbench.action.openRecent" }
+      ]
+    },
+    { "keys": "r", "name": "+Reactor", "type": "command", "command": "editor.action.refactor" },
+    {
       "keys": "s",
       "name": "+Search",
       "type": "bindings",
       "bindings": [
-        {
-          "key": "b",
-          "name": "Buffer",
-          "type": "command",
-          "command": "actions.find"
-        },
-        {
-          "key": "c",
-          "name": "Command",
-          "type": "command",
-          "command": "workbench.action.showCommands"
-        },
-        {
-          "key": "c",
-          "name": "Commands History",
-          "type": "command",
-          "command": "workbench.action.showCommands"
-        },
-        {
-          "key": "t",
-          "name": "TODO",
-          "type": "command",
-          "command": "todo-tree-view.focus"
-        },
-        {
-          "key": "g",
-          "name": "Grep (Root Dir)",
-          "type": "command",
-          "command": "find-it-faster.findWithinFiles"
-        },
-        {
-          "key": "G",
-          "name": "Grep (cwd)",
-          "type": "command",
-          "command": "find-it-faster.findWithinFiles"
-        },
+        { "key": "b", "name": "Buffer", "type": "command", "command": "actions.find" },
+        { "key": "c", "name": "Command", "type": "command", "command": "workbench.action.showCommands" },
+        { "key": "c", "name": "Commands History", "type": "command", "command": "workbench.action.showCommands" },
+        { "key": "t", "name": "TODO", "type": "command", "command": "todo-tree-view.focus" },
+        { "key": "g", "name": "Grep (Root Dir)", "type": "command", "command": "find-it-faster.findWithinFiles" },
+        { "key": "G", "name": "Grep (cwd)", "type": "command", "command": "find-it-faster.findWithinFiles" },
         {
           "key": "k",
           "name": "Keymaps (JSON)",
           "type": "command",
           "command": "workbench.action.openGlobalKeybindingsFile"
         },
-        {
-          "key": "K",
-          "name": "Keymaps (UI)",
-          "type": "command",
-          "command": "workbench.action.openGlobalKeybindings"
-        },
-        {
-          "key": "k",
-          "name": "Keymaps",
-          "type": "command",
-          "command": "workbench.action.openGlobalKeybindings"
-        },
-        {
-          "key": "r",
-          "name": "Search and Replace",
-          "type": "command",
-          "command": "workbench.action.replaceInFiles"
-        },
-        {
-          "key": "s",
-          "name": "Goto Symbol",
-          "type": "command",
-          "command": "workbench.action.gotoSymbol"
-        },
+        { "key": "K", "name": "Keymaps (UI)", "type": "command", "command": "workbench.action.openGlobalKeybindings" },
+        { "key": "k", "name": "Keymaps", "type": "command", "command": "workbench.action.openGlobalKeybindings" },
+        { "key": "r", "name": "Search and Replace", "type": "command", "command": "workbench.action.replaceInFiles" },
+        { "key": "s", "name": "Goto Symbol", "type": "command", "command": "workbench.action.gotoSymbol" },
         {
           "key": "S",
           "name": "Goto Symbol (Workspace)",
           "type": "command",
           "command": "workbench.action.showAllSymbols"
         },
-        {
-          "key": "t",
-          "name": "Todo",
-          "type": "command",
-          "command": "todo-tree.showTreeView"
-        },
-        {
-          "key": "w",
-          "name": "Word (Root Dir)",
-          "type": "command",
-          "command": "find-it-faster.findWithinFiles"
-        },
-        {
-          "key": "W",
-          "name": "Word (cwd)",
-          "type": "command",
-          "command": "find-it-faster.findWithinFiles"
-        },
+        { "key": "t", "name": "Todo", "type": "command", "command": "todo-tree.showTreeView" },
+        { "key": "w", "name": "Word (Root Dir)", "type": "command", "command": "find-it-faster.findWithinFiles" },
+        { "key": "W", "name": "Word (cwd)", "type": "command", "command": "find-it-faster.findWithinFiles" }
       ]
     },
-
     {
       "keys": "w.o",
       "name": "Close all other windows",
       "type": "command",
-      "command":"workbench.action.closeEditorsInOtherGroups",
+      "command": "workbench.action.closeEditorsInOtherGroups"
     },
+
+    // Harpoon
+    {
+      "keys": "h",
+      "name": "Harpoon Quick Menu",
+      "type": "command",
+      "command": "vscode-harpoon.editEditors"
+    },
+    {
+      "keys": "H",
+      "name": "Harpoon File",
+      "type": "command",
+      "command": "vscode-harpoon.addEditor"
+    },
+    {
+      "keys": "1",
+      "name": "harpoon to File 1",
+      "type": "command",
+      "command": "vscode-harpoon.gotoEditor1",
+      "hidden": true
+    },
+    {
+      "keys": "2",
+      "name": "harpoon to File 2",
+      "type": "command",
+      "command": "vscode-harpoon.gotoEditor2",
+      "hidden": true
+    },
+    {
+      "keys": "3",
+      "name": "harpoon to File 3",
+      "type": "command",
+      "command": "vscode-harpoon.gotoEditor3",
+      "hidden": true
+    },
+    {
+      "keys": "4",
+      "name": "harpoon to File 4",
+      "type": "command",
+      "command": "vscode-harpoon.gotoEditor4",
+      "hidden": true
+    },
+    {
+      "keys": "5",
+      "name": "harpoon to File 5",
+      "type": "command",
+      "command": "vscode-harpoon.gotoEditor5",
+      "hidden": true
+    },
+    { "keys": "6", "position": -1 },
+    { "keys": "7", "position": -1 },
+    { "keys": "8", "position": -1 }
   ],
 
-  // For React based Development
   "workbench.editor.customLabels.patterns": {
+    // NextJS
     "**/app/**/page.tsx": "${dirname} - Page",
     "**/app/**/layout.tsx": "${dirname} - Layout",
     "**/components/**/index.tsx": "${dirname} - Component",
+
+    // Flutter
+    "**/lib/**/index.dart": "${dirname}",
+    "**/lib/**/index.function.dart": "${dirname}.fn",
+    "**/lib/**/index.widget.dart": "${dirname}.ui"
   },
-  "tailwindCSS.emmetCompletions": true, // i use emmet everytime
-  "typescript.suggest.paths": true,
-  "typescript.preferences.quoteStyle": "single",
+
+  "tailwindCSS.emmetCompletions": true, // Emmet хэрэглэдэг бол `true`
   "javascript.preferences.quoteStyle": "single",
   "javascript.suggest.paths": true,
   "javascript.updateImportsOnFileMove.enabled": "always", // no effort
-  "typescript.updateImportsOnFileMove.enabled": "always", // no effort
-  "typescript.preferences.autoImportFileExcludePatterns": [
-    "next/router.d.ts",
-    "next/dist/client/router.d.ts",
-    "lucide-react"
-  ],
-  "typescript.preferences.preferTypeOnlyAutoImports": true, // Prefer type-only imports
-  // Inlay Hints
-  "editor.inlayHints.enabled": "offUnlessPressed",
   "javascript.inlayHints.parameterNames.enabled": "literals",
   "javascript.inlayHints.parameterTypes.enabled": true,
   "javascript.inlayHints.variableTypes.enabled": true,
   "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
   "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
   "javascript.inlayHints.enumMemberValues.enabled": true,
+  "typescript.suggest.paths": true,
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.preferences.autoImportFileExcludePatterns": [
+    "next/router.d.ts",
+    "next/dist/client/router.d.ts",
+    "lucide-react"
+  ],
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
   "typescript.inlayHints.variableTypes.enabled": true,
   "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
   "typescript.inlayHints.enumMemberValues.enabled": true,
@@ -1044,8 +615,8 @@
   "typescript.inlayHints.parameterTypes.enabled": true,
   "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
 
-  // Flutter, Dart
-  "dart.devToolsBrowser": "default", // must, unless it will require chrome
+  // Flutter && Dart
+  "dart.devToolsBrowser": "default", // must `default`, unless it will require chrome
   "dart.showInspectorNotificationsForWidgetErrors": true,
   "dart.debugExternalPackageLibraries": false,
   "dart.debugSdkLibraries": false,
@@ -1056,23 +627,72 @@
   "dart.flutterHotReloadOnSave": "all",
   "dart.previewFlutterUiGuidesCustomTracking": true,
   "[dart]": {
-    "editor.defaultFormatter": "Dart-Code.dart-code",
-    "editor.minimap.maxColumn": 20,
-    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
     "editor.formatOnType": true,
     "editor.selectionHighlight": true,
-    "editor.wordBasedSuggestions": "allDocuments"
+    // "editor.tabCompletion": "off",
+    "editor.defaultFormatter": "Dart-Code.dart-code",
+    "editor.minimap.maxColumn": 20,
+    "editor.tabSize": 2
   },
-  "testing.automaticallyOpenTestResults": "neverOpen",
-  "git.blame.editorDecoration.enabled": true,
-  "git.blame.statusBarItem.enabled": true,
   "typescript.experimental.expandableHover": true,
-  "workbench.iconTheme": "symbols",
-  "gitlens.currentLine.enabled": false,
-  "git.blame.statusBarItem.template": "${authorDateAgo}",
+  "editor.minimap.enabled": false, // Code-ны зай хий дэмий эзлээд байдаг
+
+  "breadcrumbs.enabled": false,
+  "workbench.layoutControl.enabled": false, // Байсан байгаагүй ялгаагүй тул нуув
+
+  // Codeium (AI)
+  "codeium.enableCodeLens": false,
+  "codeium.indexStoragePath": "/Users/ict/developmnet/codeium",
+  "codeium.enableCommandSideHintEducation": false,
+  // "whichKeyConfigGen.normalModeNonRecursiveKeybindings": [],
+  // "whichKeyConfigGen.visualModeNonRecursiveKeybindings": [],
+
+  // Animations - leader u ашиглаад toggle хийж болно
+  "workbench.list.smoothScrolling": true,
+  "editor.smoothScrolling": true,
+  "terminal.integrated.smoothScrolling": true,
+  "editor.cursorBlinking": "smooth",
+
+  // For VSCode Forks
+  // "windsurf.marketplaceExtensionGalleryServiceURL": "https://marketplace.visualstudio.com/_apis/public/gallery",
+  // "windsurf.marketplaceGalleryItemURL": "https://marketplace.visualstudio.com/items",
+  // "windsurf.enableSupercomplete": false,
+  "workbench.activityBar.location": "top", // Илүү compact
+  "workbench.panel.showLabels": false,
+  "workbench.startupEditor": "none", // Илүү дутуу юмгүй амар
+  "workbench.colorTheme": "Tokyo Night Moon",
+  // "workbench.editor.enablePreview": true
   "vscode_custom_css.imports": [
-    "file:///Users/ict/Documents/vscode_custom.css"
-  ],
-  "editor.minimap.enabled": false,
-  "workbench.statusBar.visible": false
+    "file:///Users/ict/Documents/vscode_custom.css",
+    "file:///Users/ict/.vscode-insiders/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
+  ], // Custom CSS JS Loader ашиглаж font өгсөн
+  "workbench.iconTheme": "material-icon-theme", // Харахад арай эвтэйхэн
+  "testing.automaticallyOpenTestResults": "neverOpen",
+  // "editor.formatOnSaveMode": "modificationsIfAvailable", // Бусад хүмүүсийн өмнө нь бичиж байсан code-г хөдөлгөмөөргүй байна (git blame)
+  "editor.formatOnSaveMode": "file", // Бусад хүмүүсийн өмнө нь бичиж байсан code-г хөдөлгөмөөргүй байна (git blame)
+  "workbench.editor.highlightModifiedTabs": true, // Харахад арай эвтэйхэн
+  "workbench.editor.enablePreviewFromCodeNavigation": true,
+  "workbench.editor.enablePreviewFromQuickOpen": true,
+  "workbench.editor.pinnedTabsOnSeparateRow": true, // Олон file-тай зэрэг харьцахад энэ илүү амар санагдсан
+  "workbench.editor.scrollToSwitchTabs": true, // Байхгүй байснаас дээр
+  "workbench.editor.tabActionLocation": "left", // Mac дээр ингэж хэрэглэвэл ux талаасаа илүү дээр санагдсан
+  "workbench.editor.closeOnFileDelete": true, // File устах үед ил харагдаад байхаар манараад байдаг
+  "workbench.editor.decorations.badges": false,
+  "workbench.settings.editor": "json",
+  "workbench.navigationControl.enabled": false,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "gitlens.hovers.currentLine.over": "annotation",
+  "gitlens.currentLine.enabled": false,
+  "editor.matchBrackets": "never",
+  "editor.inlayHints.enabled": "on",
+  "animations.Command-Palette": "Scale",
+  "animations.Enabled": true,
+  "animations.Install-Method": "Custom CSS and JS",
+  "animations.Scrolling": "None",
+  "animations.Tabs": "None",
+  "animations.Active": "None",
+  "animations.CursorAnimation": true,
+  "animations.UseCursorColorForCursorAnimation": true,
+  "vim.scroll": 0
 }
